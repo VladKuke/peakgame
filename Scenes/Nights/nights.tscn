@@ -1,0 +1,710 @@
+[gd_scene format=3 uid="uid://cthhku8fsrdeq"]
+
+[ext_resource type="Script" uid="uid://babox67oh2xx3" path="res://Scripts/Nights/Office/office_manager.gd" id="1_pp75g"]
+[ext_resource type="Texture2D" uid="uid://cqffwahkn4lmx" path="res://Graphics/Office/office3.png" id="2_hvcnl"]
+[ext_resource type="Script" uid="uid://bencescb72ut2" path="res://Scripts/Nights/Office/office_scrolling.gd" id="3_ejiio"]
+[ext_resource type="Texture2D" uid="uid://cg61vsf2872ci" path="res://Graphics/Light/light.png" id="4_hvcnl"]
+[ext_resource type="Texture2D" uid="uid://diafsh0vmlkw4" path="res://Graphics/Sahur/Sahur_Left.png" id="5_fbex5"]
+[ext_resource type="Script" uid="uid://cyt78opurb0y6" path="res://Scripts/Nights/tablet_manager.gd" id="5_h71ec"]
+[ext_resource type="Texture2D" uid="uid://bwp12gkddlnns" path="res://Graphics/Tablet/tablet_anim.png" id="6_1oog2"]
+[ext_resource type="Texture2D" uid="uid://438boso8ls64" path="res://Graphics/Sahur/Sahur_Right.png" id="6_bdvbr"]
+[ext_resource type="Texture2D" uid="uid://nhd5vjnlj5y8" path="res://Graphics/HUD/cam_barbutton.png" id="7_vtngn"]
+[ext_resource type="Script" uid="uid://dfi1a5gobjhxm" path="res://Scripts/Nights/Camera/Setups/default_setup.gd" id="8_a3j08"]
+[ext_resource type="Texture2D" uid="uid://blqrp1uyxujl8" path="res://Graphics/CamRooms/photo_5_2026-04-18_18-28-06.png" id="10_hvcnl"]
+[ext_resource type="Texture2D" uid="uid://dujgqy1amgxxb" path="res://Graphics/CamRooms/photo_4_2026-04-18_18-28-06.png" id="11_xn6a7"]
+[ext_resource type="Texture2D" uid="uid://dwfmdkjwenfko" path="res://Graphics/CamRooms/photo_3_2026-04-18_18-28-06.png" id="12_fbex5"]
+[ext_resource type="Texture2D" uid="uid://cpuo2r6dhkyya" path="res://Graphics/CamRooms/photo_2_2026-04-18_18-28-06.png" id="13_bdvbr"]
+[ext_resource type="Texture2D" uid="uid://piu4fclmc6ly" path="res://Graphics/CamRooms/photo_1_2026-04-18_18-28-06.png" id="14_fbex5"]
+[ext_resource type="Texture2D" uid="uid://8qq5rkryuskp" path="res://Graphics/HUD/cam_buttons.png" id="14_va0vt"]
+[ext_resource type="Texture2D" uid="uid://cie52v40ntxc0" path="res://Graphics/HUD/cam_cameras.png" id="14_xn6a7"]
+[ext_resource type="Shader" uid="uid://bmhw6f2jcbxgp" path="res://Shaders/crtwave_shader.gdshader" id="15_051wc"]
+[ext_resource type="Texture2D" uid="uid://c0d0jmshu18hk" path="res://Graphics/Static/static_anim.png" id="16_mcq0v"]
+[ext_resource type="Texture2D" uid="uid://kfas5oiik2vw" path="res://Graphics/HUD/cam_bmap.png" id="17_tmqkn"]
+[ext_resource type="AnimationNodeBlendTree" uid="uid://siq8sv1mpgct" path="res://AnimationTree/animtree_camera.tres" id="18_itk3u"]
+[ext_resource type="Script" uid="uid://bh18ibgjqneeu" path="res://Scripts/Nights/AI/ai_manager.gd" id="19_nqdqv"]
+[ext_resource type="Shader" uid="uid://b7sl4psypgsnm" path="res://Shaders/equirectangular_perspective.gdshader" id="20_obh0f"]
+[ext_resource type="Script" uid="uid://cgcqgc6ecwo8t" path="res://Scripts/Nights/AI/Characters/Sahur.gd" id="21_hvcnl"]
+[ext_resource type="Script" uid="uid://bimxdyoqens5f" path="res://Scripts/Nights/Menu/game_over.gd" id="25_bdvbr"]
+[ext_resource type="Script" uid="uid://cafeahgxvve1r" path="res://Scripts/Nights/Menu/win_screen.gd" id="26_pqsei"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5glu"]
+atlas = ExtResource("6_1oog2")
+region = Rect2(3520, 653, 880, 653)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkimb"]
+atlas = ExtResource("6_1oog2")
+region = Rect2(2640, 653, 880, 653)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esmof"]
+atlas = ExtResource("6_1oog2")
+region = Rect2(1760, 653, 880, 653)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyqqd"]
+atlas = ExtResource("6_1oog2")
+region = Rect2(880, 653, 880, 653)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tv3v2"]
+atlas = ExtResource("6_1oog2")
+region = Rect2(0, 653, 880, 653)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_011q1"]
+atlas = ExtResource("6_1oog2")
+region = Rect2(3520, 0, 880, 653)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_he7im"]
+atlas = ExtResource("6_1oog2")
+region = Rect2(2640, 0, 880, 653)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vt4va"]
+atlas = ExtResource("6_1oog2")
+region = Rect2(1760, 0, 880, 653)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rytrd"]
+atlas = ExtResource("6_1oog2")
+region = Rect2(880, 0, 880, 653)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnds1"]
+atlas = ExtResource("6_1oog2")
+region = Rect2(0, 0, 880, 653)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5t1j5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b5glu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkimb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_esmof")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fyqqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tv3v2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_011q1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_he7im")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vt4va")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rytrd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dnds1")
+}],
+"loop": false,
+"name": &"lift",
+"speed": 70.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1mul"]
+atlas = ExtResource("14_xn6a7")
+region = Rect2(0, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrm77"]
+atlas = ExtResource("14_va0vt")
+region = Rect2(48, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_us2yt"]
+atlas = ExtResource("14_xn6a7")
+region = Rect2(0, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qe3yf"]
+atlas = ExtResource("14_va0vt")
+region = Rect2(48, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcwij"]
+atlas = ExtResource("14_xn6a7")
+region = Rect2(0, 64, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60mtv"]
+atlas = ExtResource("14_va0vt")
+region = Rect2(48, 64, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xn6a7"]
+atlas = ExtResource("14_xn6a7")
+region = Rect2(0, 96, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbcdr"]
+atlas = ExtResource("14_va0vt")
+region = Rect2(48, 96, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_deh3i"]
+atlas = ExtResource("14_xn6a7")
+region = Rect2(-0.047843933, 128.013, 47.795776, 31.02533)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbex5"]
+atlas = ExtResource("14_xn6a7")
+region = Rect2(47.83822, 128.84729, 48.16178, 30.23764)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pbexm"]
+shader = ExtResource("15_051wc")
+shader_parameter/roll_speed = 2.0
+shader_parameter/roll_size = 25.0
+shader_parameter/roll_variation = 0.62
+shader_parameter/distort_intensity = 0.01
+shader_parameter/noise_opacity = 0.15
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oj4qn"]
+atlas = ExtResource("16_mcq0v")
+region = Rect2(0, 0, 1198, 890)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skfkt"]
+atlas = ExtResource("16_mcq0v")
+region = Rect2(1198, 0, 1198, 890)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80udy"]
+atlas = ExtResource("16_mcq0v")
+region = Rect2(0, 890, 1198, 890)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_moqym"]
+atlas = ExtResource("16_mcq0v")
+region = Rect2(1198, 890, 1198, 890)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ioo0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oj4qn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skfkt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80udy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_moqym")
+}],
+"loop": true,
+"name": &"default",
+"speed": 25.0
+}]
+
+[sub_resource type="Animation" id="Animation_yiym4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CamRooms/room_1:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 0, 1280, 2880)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CamRooms/room_2:region_rect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(268, 0, 1280, 2880)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CamRooms/room_3:region_rect")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 0, 1280, 1440)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CamRooms/room_4:region_rect")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(268, 0, 1280, 1440)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CamHUD/CamStatic:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.23529412)]
+}
+
+[sub_resource type="Animation" id="Animation_33l2s"]
+resource_name = "cam_scroll"
+length = 16.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CamRooms/room_1:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(3, 5, 11, 13),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 0, 798, 2372), Rect2(0, 0, 798, 2372), Rect2(268, 0, 798, 2372), Rect2(268, 0, 798, 2372)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CamRooms/room_2:region_rect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 8, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(268, 0, 798, 2372), Rect2(268, 0, 798, 2372), Rect2(0, 0, 798, 2372), Rect2(0, 0, 798, 2372)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CamRooms/room_3:region_rect")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2, 4, 10, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 0, 798, 1186), Rect2(0, 0, 798, 1186), Rect2(268, 0, 798, 1186), Rect2(268, 0, 798, 1186)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CamRooms/room_4:region_rect")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(6, 8, 14, 16),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(268, 0, 798, 1186), Rect2(268, 0, 798, 1186), Rect2(0, 0, 798, 1186), Rect2(0, 0, 798, 1186)]
+}
+
+[sub_resource type="Animation" id="Animation_kche4"]
+resource_name = "static_boot"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CamHUD/CamStatic:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.235294)]
+}
+
+[sub_resource type="Animation" id="Animation_06ke1"]
+resource_name = "static_idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CamHUD/CamStatic:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1, 1.3, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.235294), Color(1, 1, 1, 0.235294), Color(1, 1, 1, 0.235294), Color(1, 1, 1, 0.313726), Color(1, 1, 1, 0.235294)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gkfmd"]
+_data = {
+&"RESET": SubResource("Animation_yiym4"),
+&"cam_scroll": SubResource("Animation_33l2s"),
+&"static_boot": SubResource("Animation_kche4"),
+&"static_idle": SubResource("Animation_06ke1")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kco4d"]
+shader = ExtResource("20_obh0f")
+shader_parameter/fov = 0.32
+shader_parameter/stretch = Vector2(54, 27)
+
+[node name="Nights" type="Node" unique_id=1722971519]
+
+[node name="OfficeElements" type="Node" parent="." unique_id=938061930]
+script = ExtResource("1_pp75g")
+
+[node name="Office" type="Sprite2D" parent="OfficeElements" unique_id=1112427948 node_paths=PackedStringArray("sahur_node", "sahur_left_sprite", "sahur_right_sprite", "left_light", "right_light", "game_over_menu", "win_screen_menu", "tablet_system", "time_label")]
+texture = ExtResource("2_hvcnl")
+centered = false
+offset = Vector2(-540, -210)
+script = ExtResource("3_ejiio")
+sahur_node = NodePath("../../CharacterAI/Sahur")
+sahur_left_sprite = NodePath("Sahur_Left_Door")
+sahur_right_sprite = NodePath("Sahur_Right_Door")
+left_light = NodePath("left_light")
+right_light = NodePath("right_light")
+game_over_menu = NodePath("../../GameOver")
+win_screen_menu = NodePath("../../WinScreen")
+tablet_system = NodePath("../../TabletElements")
+time_label = NodePath("../../HUD/TimeLabel")
+
+[node name="LeftButton_Door" type="Button" parent="OfficeElements/Office" unique_id=1553785835]
+offset_left = -295.0
+offset_top = 137.0
+offset_right = 216.0
+offset_bottom = 1036.0
+focus_mode = 0
+flat = true
+
+[node name="RightButton_Door" type="Button" parent="OfficeElements/Office" unique_id=1956713547]
+offset_left = 1643.0
+offset_top = 146.0
+offset_right = 2160.0
+offset_bottom = 1099.0
+focus_mode = 0
+flat = true
+
+[node name="left_light" type="PointLight2D" parent="OfficeElements/Office" unique_id=352272457]
+position = Vector2(87.5, 586.50006)
+scale = Vector2(4.9335938, 4.761719)
+enabled = false
+energy = 3.51
+texture = ExtResource("4_hvcnl")
+
+[node name="right_light" type="PointLight2D" parent="OfficeElements/Office" unique_id=39444451]
+position = Vector2(1882.9999, 607.00006)
+scale = Vector2(4.9335938, 4.761719)
+enabled = false
+energy = 3.51
+texture = ExtResource("4_hvcnl")
+
+[node name="Sahur_Left_Door" type="Sprite2D" parent="OfficeElements/Office" unique_id=1469077863]
+visible = false
+position = Vector2(-7, 586)
+scale = Vector2(3.0668204, 3.0026317)
+texture = ExtResource("5_fbex5")
+
+[node name="Sahur_Right_Door" type="Sprite2D" parent="OfficeElements/Office" unique_id=250889247]
+visible = false
+position = Vector2(1810.875, 572.75)
+scale = Vector2(3.2523048, 3.051316)
+texture = ExtResource("6_bdvbr")
+
+[node name="TabletElements" type="Node2D" parent="." unique_id=368574339 node_paths=PackedStringArray("camera", "office")]
+z_index = 15
+position = Vector2(960, 540)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("5_h71ec")
+camera = NodePath("../CameraElements")
+office = NodePath("../OfficeElements/Office")
+
+[node name="Tablet_Sprite" type="AnimatedSprite2D" parent="TabletElements" unique_id=325494294]
+visible = false
+position = Vector2(0, 34)
+sprite_frames = SubResource("SpriteFrames_5t1j5")
+animation = &"lift"
+
+[node name="Tablet_Button" type="TextureButton" parent="TabletElements" unique_id=1930100673]
+modulate = Color(1, 1, 1, 0.2)
+z_index = 5
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = 290.0
+offset_right = 320.0
+offset_bottom = 361.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("7_vtngn")
+
+[node name="CameraElements" type="Node2D" parent="." unique_id=1530483995]
+visible = false
+script = ExtResource("8_a3j08")
+
+[node name="CamRooms" type="Node2D" parent="CameraElements" unique_id=569997575]
+z_index = 15
+
+[node name="room_1" type="Sprite2D" parent="CameraElements/CamRooms" unique_id=338755421]
+position = Vector2(361.5, 147.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("10_hvcnl")
+centered = false
+vframes = 4
+region_enabled = true
+region_rect = Rect2(0, 0, 1280, 2880)
+
+[node name="room_2" type="Sprite2D" parent="CameraElements/CamRooms" unique_id=479438245]
+position = Vector2(361.5, 147.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("11_xn6a7")
+centered = false
+vframes = 4
+region_enabled = true
+region_rect = Rect2(268, 0, 1280, 2880)
+
+[node name="room_3" type="Sprite2D" parent="CameraElements/CamRooms" unique_id=1694002791]
+position = Vector2(361.5, 147.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("12_fbex5")
+centered = false
+vframes = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 1280, 1440)
+
+[node name="room_4" type="Sprite2D" parent="CameraElements/CamRooms" unique_id=2113243644]
+position = Vector2(361.5, 147.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_bdvbr")
+centered = false
+vframes = 2
+region_enabled = true
+region_rect = Rect2(268, 0, 1280, 1440)
+
+[node name="room_5" type="Sprite2D" parent="CameraElements/CamRooms" unique_id=320564202]
+position = Vector2(361.5, 147.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("14_fbex5")
+centered = false
+vframes = 2
+region_enabled = true
+region_rect = Rect2(130, 0, 798, 1186)
+
+[node name="CamButtons" type="Node2D" parent="CameraElements" unique_id=333511353]
+z_index = 19
+
+[node name="room_1" type="TextureButton" parent="CameraElements/CamButtons" unique_id=1309544715]
+offset_left = 1297.0
+offset_top = 635.0
+offset_right = 1345.0
+offset_bottom = 667.0
+scale = Vector2(1.5, 1.5)
+disabled = true
+action_mode = 0
+texture_normal = SubResource("AtlasTexture_y1mul")
+texture_disabled = SubResource("AtlasTexture_lrm77")
+
+[node name="room_2" type="TextureButton" parent="CameraElements/CamButtons" unique_id=416823045]
+offset_left = 1153.0
+offset_top = 838.00006
+offset_right = 1201.0
+offset_bottom = 870.00006
+scale = Vector2(1.5, 1.5)
+action_mode = 0
+texture_normal = SubResource("AtlasTexture_us2yt")
+texture_disabled = SubResource("AtlasTexture_qe3yf")
+
+[node name="room_3" type="TextureButton" parent="CameraElements/CamButtons" unique_id=1037267751]
+offset_left = 1416.0
+offset_top = 677.0
+offset_right = 1464.0
+offset_bottom = 709.0
+scale = Vector2(1.5, 1.5)
+action_mode = 0
+texture_normal = SubResource("AtlasTexture_lcwij")
+texture_disabled = SubResource("AtlasTexture_60mtv")
+
+[node name="room_4" type="TextureButton" parent="CameraElements/CamButtons" unique_id=25550069]
+offset_left = 1446.0
+offset_top = 746.0
+offset_right = 1494.0
+offset_bottom = 778.0
+scale = Vector2(1.5, 1.5)
+action_mode = 0
+texture_normal = SubResource("AtlasTexture_xn6a7")
+texture_disabled = SubResource("AtlasTexture_lbcdr")
+
+[node name="room_5" type="TextureButton" parent="CameraElements/CamButtons" unique_id=936252341]
+offset_left = 1167.0
+offset_top = 763.0
+offset_right = 1215.0
+offset_bottom = 795.0
+scale = Vector2(1.5, 1.5)
+action_mode = 0
+texture_normal = SubResource("AtlasTexture_deh3i")
+texture_disabled = SubResource("AtlasTexture_fbex5")
+
+[node name="CamHUD" type="Node2D" parent="CameraElements" unique_id=265637972]
+z_index = 18
+
+[node name="CRTWave_Shader" type="ColorRect" parent="CameraElements/CamHUD" unique_id=1177926900]
+material = SubResource("ShaderMaterial_pbexm")
+offset_left = 361.0
+offset_top = 147.0
+offset_right = 1560.0
+offset_bottom = 1037.0
+mouse_filter = 2
+
+[node name="CamStatic" type="AnimatedSprite2D" parent="CameraElements/CamHUD" unique_id=2101194051]
+modulate = Color(1, 1, 1, 0.23529412)
+position = Vector2(361.5, 147.5)
+sprite_frames = SubResource("SpriteFrames_1ioo0")
+autoplay = "default"
+centered = false
+
+[node name="Map&Border" type="Sprite2D" parent="CameraElements/CamHUD" unique_id=1963821963]
+position = Vector2(959, 592)
+scale = Vector2(3, 3)
+texture = ExtResource("17_tmqkn")
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="CameraElements" unique_id=1418494419]
+z_index = 15
+position = Vector2(960, 540)
+scale = Vector2(9.6, 5.4)
+copy_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CameraElements" unique_id=525232898]
+libraries/ = SubResource("AnimationLibrary_gkfmd")
+
+[node name="AnimationTree" type="AnimationTree" parent="CameraElements" unique_id=14065810]
+tree_root = ExtResource("18_itk3u")
+anim_player = NodePath("../AnimationPlayer")
+parameters/Add2/add_amount = 1.0
+parameters/OneShot/active = false
+parameters/OneShot/internal_active = false
+parameters/OneShot/request = 0
+
+[node name="CharacterAI" type="Node" parent="." unique_id=204980587]
+script = ExtResource("19_nqdqv")
+sahur_level = 20
+
+[node name="Sahur" type="Node" parent="CharacterAI" unique_id=102646789 node_paths=PackedStringArray("camera")]
+script = ExtResource("21_hvcnl")
+camera = NodePath("../../CameraElements")
+
+[node name="SahurTimer" type="Timer" parent="CharacterAI/Sahur" unique_id=1736101090]
+wait_time = 10.0
+autostart = true
+
+[node name="PerspectiveShader" type="ColorRect" parent="." unique_id=259069941]
+material = SubResource("ShaderMaterial_kco4d")
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+
+[node name="GameOver" type="CanvasLayer" parent="." unique_id=787428959]
+visible = false
+script = ExtResource("25_bdvbr")
+
+[node name="ColorRect" type="ColorRect" parent="GameOver" unique_id=1373751640]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.9764706)
+
+[node name="Retry_Button" type="Button" parent="GameOver" unique_id=100725694]
+offset_left = 627.0
+offset_top = 418.0
+offset_right = 1284.0
+offset_bottom = 613.0
+theme_override_font_sizes/font_size = 80
+text = "RETRY"
+
+[node name="Exit_Button" type="Button" parent="GameOver" unique_id=1406377281]
+offset_left = 626.0
+offset_top = 656.0
+offset_right = 1283.0
+offset_bottom = 851.0
+theme_override_font_sizes/font_size = 80
+text = "EXIT"
+
+[node name="TextEdit" type="TextEdit" parent="GameOver" unique_id=68635139]
+offset_left = 702.0
+offset_top = 224.0
+offset_right = 1195.0
+offset_bottom = 364.0
+theme_override_colors/caret_background_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+text = "GAME OVER"
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=2087043734]
+
+[node name="TimeLabel" type="Label" parent="HUD" unique_id=1727100643]
+offset_left = 1562.0
+offset_top = 29.0
+offset_right = 1871.0
+offset_bottom = 163.0
+theme_override_font_sizes/font_size = 90
+text = "12 AM"
+
+[node name="WinScreen" type="CanvasLayer" parent="." unique_id=1724878623]
+visible = false
+script = ExtResource("26_pqsei")
+
+[node name="ColorRect" type="ColorRect" parent="WinScreen" unique_id=336394821]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.9764706)
+
+[node name="NextNight_Button" type="Button" parent="WinScreen" unique_id=276409732]
+offset_left = 627.0
+offset_top = 418.0
+offset_right = 1284.0
+offset_bottom = 613.0
+theme_override_font_sizes/font_size = 80
+text = "Next Night"
+
+[node name="Exit_Button" type="Button" parent="WinScreen" unique_id=371577205]
+offset_left = 626.0
+offset_top = 656.0
+offset_right = 1283.0
+offset_bottom = 851.0
+theme_override_font_sizes/font_size = 80
+text = "EXIT"
+
+[node name="TextEdit" type="TextEdit" parent="WinScreen" unique_id=2007710336]
+offset_left = 621.0
+offset_top = 224.0
+offset_right = 1301.0
+offset_bottom = 364.0
+theme_override_colors/caret_background_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+text = "Congratulations!"
+
+[connection signal="button_down" from="OfficeElements/Office/LeftButton_Door" to="OfficeElements/Office" method="_on_left_door_button_button_down"]
+[connection signal="button_up" from="OfficeElements/Office/LeftButton_Door" to="OfficeElements/Office" method="_on_left_door_button_button_up"]
+[connection signal="button_down" from="OfficeElements/Office/RightButton_Door" to="OfficeElements/Office" method="_on_right_door_button_button_down"]
+[connection signal="button_up" from="OfficeElements/Office/RightButton_Door" to="OfficeElements/Office" method="_on_right_door_button_button_up"]
+[connection signal="animation_finished" from="TabletElements/Tablet_Sprite" to="TabletElements" method="_tablet_animation_finished"]
+[connection signal="mouse_entered" from="TabletElements/Tablet_Button" to="TabletElements" method="_on_tablet_button_hover" binds= [0.5]]
+[connection signal="mouse_exited" from="TabletElements/Tablet_Button" to="TabletElements" method="_on_tablet_button_hover" binds= [0.3]]
+[connection signal="pressed" from="TabletElements/Tablet_Button" to="TabletElements" method="_on_tablet_button_click"]
+[connection signal="pressed" from="CameraElements/CamButtons/room_1" to="CameraElements" method="switch_feed" binds= [0]]
+[connection signal="pressed" from="CameraElements/CamButtons/room_2" to="CameraElements" method="switch_feed" binds= [1]]
+[connection signal="pressed" from="CameraElements/CamButtons/room_3" to="CameraElements" method="switch_feed" binds= [2]]
+[connection signal="pressed" from="CameraElements/CamButtons/room_4" to="CameraElements" method="switch_feed" binds= [3]]
+[connection signal="pressed" from="CameraElements/CamButtons/room_5" to="CameraElements" method="switch_feed" binds= [4]]
+[connection signal="timeout" from="CharacterAI/Sahur/SahurTimer" to="CharacterAI/Sahur" method="move_check"]
+[connection signal="pressed" from="GameOver/Retry_Button" to="GameOver" method="_on_retry_button_pressed"]
+[connection signal="pressed" from="GameOver/Exit_Button" to="GameOver" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="WinScreen/NextNight_Button" to="WinScreen" method="_on_next_night_button_pressed"]
+[connection signal="pressed" from="WinScreen/Exit_Button" to="WinScreen" method="_on_exit_button_pressed"]
