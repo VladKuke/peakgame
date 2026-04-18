@@ -626,13 +626,13 @@ offset_bottom = 613.0
 theme_override_font_sizes/font_size = 80
 text = "RETRY"
 
-[node name="Exit_Button" type="Button" parent="GameOver" unique_id=1406377281]
+[node name="Return_Button" type="Button" parent="GameOver" unique_id=1406377281]
 offset_left = 626.0
 offset_top = 656.0
 offset_right = 1283.0
 offset_bottom = 851.0
 theme_override_font_sizes/font_size = 80
-text = "EXIT"
+text = "RETURN"
 
 [node name="TextEdit" type="TextEdit" parent="GameOver" unique_id=68635139]
 offset_left = 702.0
@@ -673,13 +673,13 @@ offset_bottom = 613.0
 theme_override_font_sizes/font_size = 80
 text = "Next Night"
 
-[node name="Exit_Button" type="Button" parent="WinScreen" unique_id=371577205]
+[node name="Return_Button" type="Button" parent="WinScreen" unique_id=371577205]
 offset_left = 626.0
 offset_top = 656.0
 offset_right = 1283.0
 offset_bottom = 851.0
 theme_override_font_sizes/font_size = 80
-text = "EXIT"
+text = "RETURN"
 
 [node name="TextEdit" type="TextEdit" parent="WinScreen" unique_id=2007710336]
 offset_left = 621.0
@@ -705,6 +705,6 @@ text = "Congratulations!"
 [connection signal="pressed" from="CameraElements/CamButtons/room_5" to="CameraElements" method="switch_feed" binds= [4]]
 [connection signal="timeout" from="CharacterAI/Sahur/SahurTimer" to="CharacterAI/Sahur" method="move_check"]
 [connection signal="pressed" from="GameOver/Retry_Button" to="GameOver" method="_on_retry_button_pressed"]
-[connection signal="pressed" from="GameOver/Exit_Button" to="GameOver" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="GameOver/Return_Button" to="GameOver" method="_on_return_button_pressed"]
 [connection signal="pressed" from="WinScreen/NextNight_Button" to="WinScreen" method="_on_next_night_button_pressed"]
-[connection signal="pressed" from="WinScreen/Exit_Button" to="WinScreen" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="WinScreen/Return_Button" to="WinScreen" method="_on_return_button_pressed"]

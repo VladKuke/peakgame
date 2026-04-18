@@ -1,6 +1,5 @@
 res://Scripts/Nights/Menu/win_screen.gd
+res://Scripts/Nights/Menu/game_over.gd
 res://Scenes/Nights/nights.tscn
-res://Shaders/crtwave_shader.gdshader
 res://AnimationTree/animtree_camera.tres
-res://Scripts/Nights/Office/office_scrolling.gd
-res://Scripts/Nights/AI/Characters/Sahur.gd
+res://Scenes/Menu/main_menu.tscn
