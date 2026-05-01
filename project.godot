@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Cupcakes Framework"
+config/name="Mind Leak: Sakhur"
 config/tags=PackedStringArray("fnaf", "framework")
 run/main_scene="uid://cqnbrrf6eonac"
 config/features=PackedStringArray("4.6", "GL Compatibility")
@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*uid://dhcibq3drsw8p"
+StressManager="*uid://do0xsx8qjik7p"
 
 [display]
 

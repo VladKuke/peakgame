@@ -1,5 +1,2 @@
-res://Scripts/Nights/Menu/win_screen.gd
-res://Scripts/Nights/Menu/game_over.gd
 res://Scenes/Nights/nights.tscn
 res://AnimationTree/animtree_camera.tres
-res://Scenes/Menu/main_menu.tscn

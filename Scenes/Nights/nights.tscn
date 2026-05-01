@@ -8,9 +8,10 @@
 [ext_resource type="Script" uid="uid://cyt78opurb0y6" path="res://Scripts/Nights/tablet_manager.gd" id="5_h71ec"]
 [ext_resource type="Texture2D" uid="uid://bwp12gkddlnns" path="res://Graphics/Tablet/tablet_anim.png" id="6_1oog2"]
 [ext_resource type="Texture2D" uid="uid://438boso8ls64" path="res://Graphics/Sahur/Sahur_Right.png" id="6_bdvbr"]
-[ext_resource type="Texture2D" uid="uid://nhd5vjnlj5y8" path="res://Graphics/HUD/cam_barbutton.png" id="7_vtngn"]
+[ext_resource type="Script" uid="uid://8yc7mv76wv1m" path="res://Scripts/Player/stress.bar.gd" id="7_2lb4s"]
+[ext_resource type="Texture2D" uid="uid://saymoipyxnlt" path="res://Graphics/HUD/cam_barbutton.png" id="7_vtngn"]
 [ext_resource type="Script" uid="uid://dfi1a5gobjhxm" path="res://Scripts/Nights/Camera/Setups/default_setup.gd" id="8_a3j08"]
-[ext_resource type="Texture2D" uid="uid://blqrp1uyxujl8" path="res://Graphics/CamRooms/photo_5_2026-04-18_18-28-06.png" id="10_hvcnl"]
+[ext_resource type="Texture2D" uid="uid://csmdven8q70pa" path="res://Graphics/Tablet/phone_anim.png" id="9_rkp18"]
 [ext_resource type="Texture2D" uid="uid://dujgqy1amgxxb" path="res://Graphics/CamRooms/photo_4_2026-04-18_18-28-06.png" id="11_xn6a7"]
 [ext_resource type="Texture2D" uid="uid://dwfmdkjwenfko" path="res://Graphics/CamRooms/photo_3_2026-04-18_18-28-06.png" id="12_fbex5"]
 [ext_resource type="Texture2D" uid="uid://cpuo2r6dhkyya" path="res://Graphics/CamRooms/photo_2_2026-04-18_18-28-06.png" id="13_bdvbr"]
@@ -26,44 +27,74 @@
 [ext_resource type="Script" uid="uid://cgcqgc6ecwo8t" path="res://Scripts/Nights/AI/Characters/Sahur.gd" id="21_hvcnl"]
 [ext_resource type="Script" uid="uid://bimxdyoqens5f" path="res://Scripts/Nights/Menu/game_over.gd" id="25_bdvbr"]
 [ext_resource type="Script" uid="uid://cafeahgxvve1r" path="res://Scripts/Nights/Menu/win_screen.gd" id="26_pqsei"]
+[ext_resource type="Script" uid="uid://cdd6y67urak2w" path="res://Scripts/Nights/phone_manager.gd" id="28_1ojnv"]
+[ext_resource type="PackedScene" uid="uid://b7wh4im7as07x" path="res://Scenes/UI/phone_ui.tscn" id="28_rkp18"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_b5glu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_e71s1"]
+atlas = ExtResource("9_rkp18")
+region = Rect2(5120, 1920, 1280, 1920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tf7aw"]
+atlas = ExtResource("9_rkp18")
+region = Rect2(3840, 1920, 1280, 1920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ts1s"]
+atlas = ExtResource("9_rkp18")
+region = Rect2(2560, 1920, 1280, 1920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15ttt"]
+atlas = ExtResource("9_rkp18")
+region = Rect2(1280, 1920, 1280, 1920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5e34"]
+atlas = ExtResource("9_rkp18")
+region = Rect2(0, 1920, 1280, 1920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2123g"]
+atlas = ExtResource("9_rkp18")
+region = Rect2(5120, 0, 1280, 1920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6h7ju"]
+atlas = ExtResource("9_rkp18")
+region = Rect2(3840, 0, 1280, 1920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkp18"]
 atlas = ExtResource("6_1oog2")
 region = Rect2(3520, 653, 880, 653)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mkimb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ojnv"]
 atlas = ExtResource("6_1oog2")
 region = Rect2(2640, 653, 880, 653)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_esmof"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_egk1u"]
 atlas = ExtResource("6_1oog2")
 region = Rect2(1760, 653, 880, 653)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fyqqd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2li7"]
 atlas = ExtResource("6_1oog2")
 region = Rect2(880, 653, 880, 653)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tv3v2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xftyl"]
 atlas = ExtResource("6_1oog2")
 region = Rect2(0, 653, 880, 653)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_011q1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_risgj"]
 atlas = ExtResource("6_1oog2")
 region = Rect2(3520, 0, 880, 653)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_he7im"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6tga"]
 atlas = ExtResource("6_1oog2")
 region = Rect2(2640, 0, 880, 653)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vt4va"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_oovhi"]
 atlas = ExtResource("6_1oog2")
 region = Rect2(1760, 0, 880, 653)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rytrd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_162og"]
 atlas = ExtResource("6_1oog2")
 region = Rect2(880, 0, 880, 653)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dnds1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5asa8"]
 atlas = ExtResource("6_1oog2")
 region = Rect2(0, 0, 880, 653)
 
@@ -71,39 +102,68 @@ region = Rect2(0, 0, 880, 653)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_b5glu")
+"texture": SubResource("AtlasTexture_e71s1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mkimb")
+"texture": SubResource("AtlasTexture_tf7aw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_esmof")
+"texture": SubResource("AtlasTexture_3ts1s")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fyqqd")
+"texture": SubResource("AtlasTexture_15ttt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tv3v2")
+"texture": SubResource("AtlasTexture_i5e34")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_011q1")
+"texture": SubResource("AtlasTexture_2123g")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_he7im")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vt4va")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rytrd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dnds1")
+"texture": SubResource("AtlasTexture_6h7ju")
 }],
 "loop": false,
 "name": &"lift",
-"speed": 70.0
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkp18")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ojnv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_egk1u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2li7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xftyl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_risgj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6tga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oovhi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_162og")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5asa8")
+}],
+"loop": false,
+"name": &"lift_1",
+"speed": 15.0
 }]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rkp18"]
+load_path = "res://.godot/imported/photo_5_2026-04-18_18-28-06.png-3ce6e8165ab0627487926265b85cfea5.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y1mul"]
 atlas = ExtResource("14_xn6a7")
@@ -413,6 +473,13 @@ position = Vector2(1810.875, 572.75)
 scale = Vector2(3.2523048, 3.051316)
 texture = ExtResource("6_bdvbr")
 
+[node name="StressBar" type="ProgressBar" parent="OfficeElements/Office" unique_id=1820673987]
+offset_left = 441.0
+offset_top = 95.0
+offset_right = 1350.0
+offset_bottom = 146.0
+script = ExtResource("7_2lb4s")
+
 [node name="TabletElements" type="Node2D" parent="." unique_id=368574339 node_paths=PackedStringArray("camera", "office")]
 z_index = 15
 position = Vector2(960, 540)
@@ -425,7 +492,9 @@ office = NodePath("../OfficeElements/Office")
 visible = false
 position = Vector2(0, 34)
 sprite_frames = SubResource("SpriteFrames_5t1j5")
-animation = &"lift"
+animation = &"lift_1"
+frame = 6
+frame_progress = 0.22928296
 
 [node name="Tablet_Button" type="TextureButton" parent="TabletElements" unique_id=1930100673]
 modulate = Color(1, 1, 1, 0.2)
@@ -434,10 +503,10 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -320.0
-offset_top = 290.0
-offset_right = 320.0
-offset_bottom = 361.0
+offset_left = 4.666677
+offset_top = 272.66666
+offset_right = 644.6667
+offset_bottom = 331.33334
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("7_vtngn")
@@ -452,7 +521,7 @@ z_index = 15
 [node name="room_1" type="Sprite2D" parent="CameraElements/CamRooms" unique_id=338755421]
 position = Vector2(361.5, 147.5)
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("10_hvcnl")
+texture = SubResource("CompressedTexture2D_rkp18")
 centered = false
 vframes = 4
 region_enabled = true
@@ -607,6 +676,7 @@ offset_bottom = 1080.0
 mouse_filter = 2
 
 [node name="GameOver" type="CanvasLayer" parent="." unique_id=787428959]
+process_mode = 3
 visible = false
 script = ExtResource("25_bdvbr")
 
@@ -654,6 +724,7 @@ theme_override_font_sizes/font_size = 90
 text = "12 AM"
 
 [node name="WinScreen" type="CanvasLayer" parent="." unique_id=1724878623]
+process_mode = 3
 visible = false
 script = ExtResource("26_pqsei")
 
@@ -690,11 +761,44 @@ theme_override_colors/caret_background_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 80
 text = "Congratulations!"
 
+[node name="PhoneElements" type="Node2D" parent="." unique_id=1173687153 node_paths=PackedStringArray("phone_ui", "tablet_manager", "office")]
+z_index = 15
+position = Vector2(960, 540)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("28_1ojnv")
+phone_ui = NodePath("../PhoneUi")
+tablet_manager = NodePath("../TabletElements")
+office = NodePath("../OfficeElements/Office")
+
+[node name="Phone_Sprite" type="AnimatedSprite2D" parent="PhoneElements" unique_id=1966065099]
+visible = false
+position = Vector2(0, 34)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_5t1j5")
+animation = &"lift"
+frame = 6
+
+[node name="Phone_Button" type="TextureButton" parent="PhoneElements" unique_id=1003145609]
+modulate = Color(1, 1, 1, 0.2)
+z_index = 5
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -642.0
+offset_top = 272.66666
+offset_right = -2.0
+offset_bottom = 331.33334
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("7_vtngn")
+
+[node name="PhoneUi" parent="." unique_id=40521724 instance=ExtResource("28_rkp18")]
+
 [connection signal="button_down" from="OfficeElements/Office/LeftButton_Door" to="OfficeElements/Office" method="_on_left_door_button_button_down"]
 [connection signal="button_up" from="OfficeElements/Office/LeftButton_Door" to="OfficeElements/Office" method="_on_left_door_button_button_up"]
 [connection signal="button_down" from="OfficeElements/Office/RightButton_Door" to="OfficeElements/Office" method="_on_right_door_button_button_down"]
 [connection signal="button_up" from="OfficeElements/Office/RightButton_Door" to="OfficeElements/Office" method="_on_right_door_button_button_up"]
-[connection signal="animation_finished" from="TabletElements/Tablet_Sprite" to="TabletElements" method="_tablet_animation_finished"]
 [connection signal="mouse_entered" from="TabletElements/Tablet_Button" to="TabletElements" method="_on_tablet_button_hover" binds= [0.5]]
 [connection signal="mouse_exited" from="TabletElements/Tablet_Button" to="TabletElements" method="_on_tablet_button_hover" binds= [0.3]]
 [connection signal="pressed" from="TabletElements/Tablet_Button" to="TabletElements" method="_on_tablet_button_click"]

@@ -40,6 +40,15 @@ var can_move: bool = true
 func _ready() -> void:
 	_initialize_scroll_areas(get_viewport())
 	_update_time_display()
+	
+	# --- STRESS SYSTEM SETUP ---
+	# Ensure stress starts at 0 and is actively ticking when the night begins
+	StressManager.current_stress = 0.0
+	StressManager.set_process(true)
+	
+	# Listen for the 100% stress signal and trigger the game over sequence
+	if not StressManager.stress_maxed.is_connected(_game_over):
+		StressManager.stress_maxed.connect(_game_over)
 
 func _process(delta: float) -> void:
 	_handle_move(delta)
@@ -137,19 +146,35 @@ func _game_over() -> void:
 	set_process(false)
 	can_move = false
 	force_lights_off()
+	
+	# Stop stress from increasing further
+	StressManager.set_process(false)
+	
 	if tablet_system:
 		tablet_system.visible = false
 	if game_over_menu:
 		game_over_menu.visible = true
+		
+	# Show the mouse and pause the background game
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	get_tree().paused = true
 
 func _win_game() -> void:
 	set_process(false)
 	can_move = false
 	force_lights_off()
+	
+	# Stop stress from killing the player while they are on the Win Screen!
+	StressManager.set_process(false)
+	
 	if tablet_system:
 		tablet_system.visible = false
 	if win_screen_menu:
 		win_screen_menu.visible = true
+		
+	# Show the mouse and pause the background game
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	get_tree().paused = true
 
 func force_lights_off() -> void:
 	if left_light: left_light.enabled = false

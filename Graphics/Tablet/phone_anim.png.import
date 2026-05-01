@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://saymoipyxnlt"
-path="res://.godot/imported/cam_barbutton.png-784ae07bdec4bb4116ea702bfa891810.ctex"
+uid="uid://csmdven8q70pa"
+path="res://.godot/imported/phone_anim.png-575a3a17ba09d4f33ebd4214f50e0887.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/HUD/cam_barbutton.png"
-dest_files=["res://.godot/imported/cam_barbutton.png-784ae07bdec4bb4116ea702bfa891810.ctex"]
+source_file="res://Graphics/Tablet/phone_anim.png"
+dest_files=["res://.godot/imported/phone_anim.png-575a3a17ba09d4f33ebd4214f50e0887.ctex"]
 
 [params]
 
